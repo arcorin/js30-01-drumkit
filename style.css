@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    background-image: url("background.jpg")
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.keys {
+    min-width: 290px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media(min-width: 350px) {
+    .keys {
+        width: 350px;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 500px) {
+    .keys {
+        width: 500px;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 1000px) {
+    .keys {
+        width: 100vw;
+    }
+}
+
+.key {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 4rem;
+    padding: 0.2rem;
+    transition: all 0.1s;
+    background: rgba(8, 8, 8, 0.596);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.key kbd {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.key span {
+    margin: 0;
+    color: rgb(255, 204, 0);
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 4px solid rgb(255, 204, 0);
+    box-shadow: 0px 0px 10px rgb(255, 204, 50);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.audio-keys,
+.silent-keys {
+    width: 35vw;
+    height: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow:
+        2px 2px 10px black,
+        2px -2px 10px black,
+        -2px 2px 10px black,
+        -2px -2px 10px black;
+}
+
+.audio-keys {
+    text-align: left;
+}
+
+.silent-keys {
+    text-align: right;
+}
+
+.audio-keys span,
+.silent-keys span {
+    color: rgb(116, 114, 114);
+}
